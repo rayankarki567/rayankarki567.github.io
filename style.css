@@ -3954,7 +3954,7 @@ img.zoom-img{
     transition:all .2s linear
 }
 .social-round-icon:hover{
-    background-color:#1763e9;
+    background-color:#00006b;
     color:#fff;
     border-color:#1763e9
 }
@@ -3964,7 +3964,7 @@ img.zoom-img{
 }
 .social-round-icon.white-round-icon:hover{
     background-color:#fff;
-    color:#1763e9;
+    color:#00006b;
     border-color:#fff
 }
 .fa-icon{

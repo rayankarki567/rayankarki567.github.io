@@ -2650,10 +2650,12 @@ tbody.collapse.in{
     border-top-left-radius:0
 }
 .navbar{
+    mar
     position:relative;
     min-height:80px;
     margin-bottom:25px;
     border:1px solid transparent
+    margin: 0;
 }
 .navbar:after,.navbar:before{
     content:" ";

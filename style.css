@@ -2653,7 +2653,6 @@ tbody.collapse.in{
     position:relative;
     min-height:80px;
     margin-bottom:25px;
-    border:1px solid transparent;
     margin: 0;
 }
 .navbar:after,.navbar:before{
@@ -3342,6 +3341,58 @@ button.close{
     border:0;
     -webkit-appearance:none
 }
+.content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    position: relative;
+  }
+  
+  .shadow-line {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .box1 {
+    background-color: white;
+    border-radius: 15px;
+    height: 300px;
+    width: 450px;
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .box1:hover {
+    transform: scale(1.1);
+  }
+  
+  .box1 h2 {
+    margin-top: 30px;
+  }
+  
+  .button1 {
+    padding: 10px 20px;
+    font-size: 19px;
+    border-radius: 15px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    margin: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .button1:hover {
+    transform: scale(1.1);
+  }
+  
 .carousel,.carousel-inner{
     position:relative
 }

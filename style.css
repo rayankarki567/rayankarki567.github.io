@@ -4178,6 +4178,10 @@ label{
  .hero-full-container h1{
      font-family: 'Source Sans Pro', sans-serif;
      font-size: 2.5em;
+     pointer-events: none;
+}
+.hero-full-container p{
+    pointer-events: none;
 }
 .btn{
     border-radius: 15px;

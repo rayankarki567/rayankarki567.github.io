@@ -3341,6 +3341,8 @@ button.close{
     border:0;
     -webkit-appearance:none
 }
+
+/* SXC Css*/
 .content1 {
     display: flex;
     justify-content: center;
@@ -3392,6 +3394,105 @@ button.close{
   .button1:hover {
     transform: scale(1.1);
   }
+
+
+  /* Prototype CSS from here*/
+  
+
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.06), 0 0 50px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    transform: rotateX(45deg);
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .box:hover {
+    transform: rotateX(45deg) scale(1.1); /* Rotate and scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.16), 0 0 40px rgba(0, 0, 0, 0.12), 0 0 50px rgba(0, 0, 0, 0.08);
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .box:nth-child(1) {
+    transform: rotateX(-10deg) rotateY(-35deg)  translateX(75%) translateY(-20%);
+    z-index: 3;
+  }
+  
+  .box:nth-child(2) {
+    transform: rotateX(-10deg) rotateY(-35deg) translateX(5%) translateY(-20%);
+    z-index: 2;
+  }
+  
+  .box:nth-child(3) {
+    transform: rotateX(-10deg)rotateY(-35deg) translateX(-60%) translateY(-20%);;
+    z-index: 1;
+  }
+  
+  .buttons {
+    display: none;
+  }
+  
+  .box.is-selected {
+    transform: scale(2.5); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.16), 0 0 40px rgba(0, 0, 0, 0.12), 0 0 50px rgba(0, 0, 0, 0.08); /* Add border shadow with different opacity */
+    z-index: 4;
+  }
+  
+  .box.is-selected .buttons {
+    display: flex; 
+    transform: scale(0.4); 
+  }
+  
+  .box h2 {
+    margin: 0;
+  }
+  
+
+
+  
   
 .carousel,.carousel-inner{
     position:relative

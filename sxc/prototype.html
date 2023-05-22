@@ -48,23 +48,34 @@
     </div>
   </nav>
 </header>
-<div class="content1">
-  <div class="box1">
-    <h2>Sem 1</h2>
-    <button class="button1"><a href="https://drive.google.com/drive/folders/1KjzbYI-B1dBRknEGeoxk96svcuyx6Nxy?usp=sharing" target="_blank"><strong style="color: white;">Books</strong></a></button>
-    <button class="button1"><a href="https://drive.google.com/drive/folders/1T9MkQtq-J-HLIkHv5Th7PkYnhpXM66Bt?usp=sharing" target="_blank"><strong style="color: white;">Notes</strong></a></button>
-    <button class="button1"><a href="https://drive.google.com/drive/folders/1RPEZbFZGVEhjPdUSZu4RdZ46gyvj4Kal?usp=sharing" target="_blank"><strong style="color: white;">Practicals</strong></a></button>
+
+<div class="box-container">
+    <div class="box" id="box1">
+      <h2>Sem 1</h2>
+      <div class="buttons">
+        <button class="button"><a href="https://drive.google.com/drive/folders/1KjzbYI-B1dBRknEGeoxk96svcuyx6Nxy?usp=sharing" target="_blank"><strong style="color: white;">Books</strong></a></button>
+        <button class="button"><a href="https://drive.google.com/drive/folders/1T9MkQtq-J-HLIkHv5Th7PkYnhpXM66Bt?usp=sharing" target="_blank"><strong style="color: white;">Notes</strong></a></button>
+        <button class="button"><a href="https://drive.google.com/drive/folders/1RPEZbFZGVEhjPdUSZu4RdZ46gyvj4Kal?usp=sharing" target="_blank"><strong style="color: white;">Practicals</strong></a></button>
+      </div>
+    </div>
+    <div class="box" id="box2">
+      <h2>Sem 2</h2>
+      <div class="buttons">
+        <button class="button">Button 4</button>
+        <button class="button">Button 5</button>
+        <button class="button">Button 6</button>
+      </div>
+    </div>
+    <div class="box" id="box3">
+      <h2>Sem 3</h2>
+      <div class="buttons">
+        <button class="button">Button 7</button>
+        <button class="button">Button 8</button>
+        <button class="button">Button 9</button>
+      </div>
+    </div>
   </div>
- <!-- <div class="box1">
-    <h2>Sem 2</h2>
-    <button class="button1">Button 1</button>
-    <button class="button1">Button 2</button>
-    <button class="button1">Button 3</button>
-  </div> -->
-</div>
-<div class="content2">
-  <p>Prototype</p>
-</div>
+  
 <footer class="footer-container white-text-container" style="position: absolute; bottom: 0%; width: 100%; right: 0; left: 0;">
   <div class="container">
     <div class="row">
@@ -94,6 +105,32 @@
       </div>
   </div>
 </footer>
+
+<script>
+    const boxes = document.querySelectorAll('.box');
+  
+  boxes.forEach((box) => {
+    box.addEventListener('click', () => {
+      // Remove the 'is-selected' class from all boxes
+      boxes.forEach((box) => {
+        box.classList.remove('is-selected');
+      });
+  
+      // Add the 'is-selected' class to the clicked box
+      box.classList.add('is-selected');
+    });
+  });
+  
+  // Clicking on the background (box-container) will remove the 'is-selected' class from all boxes
+  const boxContainer = document.querySelector('.box-container');
+  boxContainer.addEventListener('click', (event) => {
+    if (event.target === boxContainer) {
+      boxes.forEach((box) => {
+        box.classList.remove('is-selected');
+      });
+    }
+  });
+  </script>
 
 <script type="text/javascript" src="../main.js"></script>
 <script type="text/javascript" src="../particles.min.js"></script>

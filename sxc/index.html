@@ -36,12 +36,12 @@
 <script>
     const boxes = document.querySelectorAll('.box');
 
-  const boxes = document.querySelectorAll('.box');
-
-  boxes.forEach((box) => {
-    box.addEventListener('click', () => {
-      const url = box.dataset.url;
-      window.open(url, '_blank');
+    boxes.forEach((box) => {
+      box.addEventListener('click', () => {
+        const url = box.getAttribute('data-url');
+        if (url) {
+          window.open(url, '_blank');
+        }
     });
   });
 

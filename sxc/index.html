@@ -36,16 +36,15 @@
 <script>
     const boxes = document.querySelectorAll('.box');
 
-    boxes.forEach((box) => {
-      box.addEventListener('click', () => {
-        boxes.forEach((box) => {
-          box.classList.remove('is-selected');
-        });
-        box.classList.add('is-selected');
-        const url = box.dataset.url;
-        window.open(url, '_blank');
-      });
+  const boxes = document.querySelectorAll('.box');
+
+  boxes.forEach((box) => {
+    box.addEventListener('click', () => {
+      const url = box.dataset.url;
+      window.open(url, '_blank');
     });
+  });
+
 </script>
 
 <script type="text/javascript" src="../main.js"></script>

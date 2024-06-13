@@ -3438,16 +3438,21 @@ button.close{
   
   .box:nth-child(1) {
     transform: rotateX(-10deg) rotateY(-35deg)  translateX(75%) translateY(-20%);
-    z-index: 3;
+    z-index: 4;
   }
   
   .box:nth-child(2) {
     transform: rotateX(-10deg) rotateY(-35deg) translateX(5%) translateY(-20%);
-    z-index: 2;
+    z-index: 3;
   }
   
   .box:nth-child(3) {
     transform: rotateX(-10deg)rotateY(-35deg) translateX(-60%) translateY(-20%);;
+    z-index: 2;
+  }
+
+  .box:nth-child(4) {
+    transform: rotateX(-10deg)rotateY(-39deg) translateX(-120%) translateY(-20%);;
     z-index: 1;
   }
   
